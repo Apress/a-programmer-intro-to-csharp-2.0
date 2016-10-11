@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiskDiff", "DiskDiff.csproj", "{D537D7C6-10F8-4983-83BD-CFB8B10A8FFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D537D7C6-10F8-4983-83BD-CFB8B10A8FFC}.Debug|Default.ActiveCfg = Debug|Any CPU
+		{D537D7C6-10F8-4983-83BD-CFB8B10A8FFC}.Debug|Default.Build.0 = Debug|Any CPU
+		{D537D7C6-10F8-4983-83BD-CFB8B10A8FFC}.Release|Default.ActiveCfg = Release|Any CPU
+		{D537D7C6-10F8-4983-83BD-CFB8B10A8FFC}.Release|Default.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

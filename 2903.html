@@ -1,0 +1,146 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>A Programmer</title>
+</head>
+
+<body>
+
+<h1>A Programmer's Introduction to C# 2.0, Third Edition.&nbsp; </h1>
+<h1>Errata</h1>
+<h2>Chapter 7 - Member Accessibility and Overloading, Page 58</h2>
+<p>Change the code that reads:</p>
+<p>In the first call to Process(), an int is passed as an argument. This matches 
+the long version of the function because there’s an implicit conversion from int 
+to long and no implicit conversion from int to short.</p>
+<p>to</p>
+<p>In the first call to Process(), an int is passed as an argument. This matches 
+the long version of the function because there’s an implicit conversion from int 
+to long and no implicit conversion from int to sbyte.</p>
+<p><b><font size="5">Chapter 8 - Other Class Details, Page 73</font></b></p>
+<p>Change the code that reads:</p>
+<p>// call to new can't be used with static</p>
+<p>to</p>
+<p>// call to new can't be used with const</p>
+<p>Change the text that reads:</p>
+<p>This clearly doesn’t work because the static members Red, Green, and Blue 
+can’t be calculated at compile time.</p>
+<p>to</p>
+<p>This clearly doesn’t work because the const members Red, Green, and Blue 
+can’t be calculated at compile time.</p>
+<h2>Chapter 18 - Strings - Page 162</h2>
+<p>Remove the line that reads:</p>
+<dl>
+	<dd>char[] separators = {' ', ','};</dd>
+</dl>
+<h2>Chapter 18 - Strings - Page 163</h2>
+<p>Replace the following table entry:</p>
+<dl>
+	<dd>Multiline Changes the meaning of the caret (^) and question mark ($) so 
+	they match at the beginning or end of any line, not the beginning or end of 
+	the whole string</dd>
+</dl>
+<p>with:</p>
+<dl>
+	<dd>Multiline Changes the meaning of the caret (^) and dollar sign ($) so 
+	they match at the beginning or end of any line, not the beginning or end of 
+	the whole string</dd>
+</dl>
+<h2>Chapter 18 - Strings - Page 167</h2>
+Change the code that reads:<dl>
+	<dl>
+		<dd>Marshal.SecureStringToGlobalAllocUni( ss );</dd>
+	</dl>
+	<p>to:<dl>
+		<dd>Marshal.SecureStringToGlobalAllocUnicode( ss ); </dd>
+	</dl>
+</dl>
+<h2>Chapter 20 - Page 186 - Enumerators:</h2>
+<p>Change the code that reads:</p>
+<dl>
+	<dd>using System;</dd>
+	<dd>using System.Collections;</dd>
+	<dd>&nbsp;</dd>
+	<dd>// Note: This class is not thread-safe </dd>
+	<dd>public class IntList: IEnumerable</dd>
+	<dd>{ </dd>
+	<dd>&nbsp;int[] values = new int[10]; </dd>
+	<dd>&nbsp;int allocated = values.Length; </dd>
+	<dd>&nbsp;int count = 0;</dd>
+</dl>
+<p>to:</p>
+<dl>
+	<dd>using System;</dd>
+	<dd>using System.Collections;</dd>
+	<dd>&nbsp;</dd>
+	<dd>// Note: This class is not thread-safe </dd>
+	<dd>public class IntList: IEnumerable</dd>
+	<dd>{ </dd>
+	<dd>&nbsp;int[] values; </dd>
+	<dd>&nbsp;int allocated; </dd>
+	<dd>&nbsp;int count;</dd>
+	<dd>&nbsp;</dd>
+	<dd>public IntList()</dd>
+	<dd>{</dd>
+	<dd>&nbsp;values = new int[10];</dd>
+	<dd>&nbsp;allocated = values.Length;</dd>
+	<dd>count = 0;</dd>
+	<dd>}</dd>
+</dl>
+<h2>Chapter 20, Indexers, Enumerators and Iterators, Page 188</h2>
+<p>Change the code that reads:</p>
+<dl>
+	<dd>class IntListEnumerator</dd>
+</dl>
+<p>to:</p>
+<dl>
+	<dd>public class IntListEnumerator</dd>
+</dl>
+<h2>Chapter 22, Attributes, Page 214:</h2>
+<p>Change the code that reads:</p>
+<dl>
+	<dd>Type type = typeof(Complex); </dd>
+	<dd>foreach (CodeReviewAttribute att in 
+	type.GetCustomAttributes(typeof(CodeReviewAttribute), false)) </dd>
+	<dd>{ </dd>
+	<dd>&nbsp;CodeReviewAttribute att = (CodeReviewAttribute) atts[0]; </dd>
+	<dd>&nbsp;Console.WriteLine(&quot;Reviewer: {0}&quot;, att.Reviewer); </dd>
+	<dd>&nbsp;Console.WriteLine(&quot;Date: {0}&quot;, att.Date); </dd>
+	<dd>&nbsp;Console.WriteLine(&quot;Comment: {0}&quot;, att.Comment); }</dd>
+	<dd>}</dd>
+</dl>
+<p>to:</p>
+<dl>
+	<dd>Type type = typeof(Complex); </dd>
+	<dd>foreach (CodeReviewAttribute att in 
+	type.GetCustomAttributes(typeof(CodeReviewAttribute), false)) </dd>
+	<dd>{ </dd>
+	<dd>&nbsp;Console.WriteLine(&quot;Reviewer: {0}&quot;, att.Reviewer); </dd>
+	<dd>&nbsp;Console.WriteLine(&quot;Date: {0}&quot;, att.Date); </dd>
+	<dd>&nbsp;Console.WriteLine(&quot;Comment: {0}&quot;, att.Comment); }</dd>
+	<dd>}</dd>
+<h2>Chapter 27, Attributes, Page 268:</h2>
+<p>Change the code that reads:</p>
+<dl>
+	<dd>int j = Nullable.GetValueOrDefault&lt;int&gt;(i); // returns 0</dd>
+</dl>
+<p>to:</p>
+<dl>
+	<dd>int j = i.GetValueOrDefault(); // returns 0</dd>
+<p>Change the code that reads:</p>
+<dl>
+	<dd>j = Nullable.GetValueOrDefault&lt;int&gt;(i); // returns 123</dd>
+</dl>
+<p>to:</p>
+<dl>
+	<dd>j = i.GetValueOrDefault(); // returns 123</dd>
+</dl>
+	<dt>&nbsp;</dt>
+</dl>
+	<dt>&nbsp;</dt>
+</dl>
+</body>
+
+</html>
